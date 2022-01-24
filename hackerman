@@ -11,5 +11,11 @@ while true; do
   else
     tput setaf 7
   fi
-  cat /dev/urandom | head -1
+  if [ $[RANDOM % 10] -eq 0 ]; then
+    cal -y
+  elif [ $[RANDOM % 9] -eq 0 ]; then
+    ls -l
+  else
+    cat /dev/urandom | head -1
+  fi
 done
