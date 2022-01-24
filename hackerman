@@ -11,8 +11,5 @@ while true; do
   else
     tput setaf 7
   fi
-  if [ $[RANDOM % 2] -eq 0 ]; then
-    printf '\n'
-  fi
   cat /dev/urandom | head -1
 done
